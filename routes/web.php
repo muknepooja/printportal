@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('theme_u::index');
 });
 
-Route::get('order/index','OrderController@index');
+Route::get('order','OrderController@index')->name('order');
