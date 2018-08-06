@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('admin', function () {
-    return view('admin_template');
+Route::get('/', function () {
+    return view('theme_u::index');
 });
+
+Route::get('order/index','OrderController@index');
