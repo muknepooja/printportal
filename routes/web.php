@@ -10,9 +10,26 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('theme_u::index');
+    return view('auth.login');
 });
 
-Route::get('order','OrderController@index')->name('order');
+
+Auth::routes();
+
+Route::get('verify','ResourceController@index')->name('verify');
+
+Route::prefix('user')->group(function() {
+	Route::get('order','OrderController@index')->name('order');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::resource('order', 'AOrderController');
+    Route::resource('employee', 'EmployeeController');
+    Route::resource('template', 'ETemplateController');
+});
+
+Route::prefix('superadmin')->group(function () {
+    Route::resource('approval', 'ApprovalController');
+    Route::get('approvalstate','ApprovalController@approvalstate')->name('approval.approvalstate');
+});

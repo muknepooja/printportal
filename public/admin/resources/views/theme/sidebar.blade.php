@@ -27,7 +27,8 @@
         <ul class="sidebar-menu">
             <li class="header">NAMECARD</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{route('order')}}"><span>Dashboard</span></a></li>
+            <li><a href="#"><span>Dashboard</span></a></li>
+            <li class="active"><a href="{{route('employee.index')}}"><span>Employee</span></a></li>
             <!-- <li class="treeview">
                 <a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
