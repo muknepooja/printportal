@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //print_r(request()->all());exit;
-        return view('admin_template');
+        if(Auth::user()->email=='joseflim@timesprinters.com')
+            return redirect('dashboard');
+        if(Auth::user()->email=='poojasm@timesprinters.com')
+            return redirect('adashboard');
+        if(Auth::user()->email=='aaron.theam@timesprinters.com')
+            return redirect('sdashboard');
     }
 }

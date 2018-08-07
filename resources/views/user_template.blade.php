@@ -149,7 +149,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Namecard </a></li>
+                                <li><a href="{{ route('order')}}"><i class="fa fa-circle-o"></i> Namecard </a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i> Folder </a></li>
                             </ul>
 

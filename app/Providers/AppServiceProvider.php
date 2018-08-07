@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadViewsFrom(public_path('resources/superadmin/views'), 'theme_s');
+        $this->loadViewsFrom(public_path('resources/admin/views'), 'theme_a');
+        $this->loadViewsFrom(public_path('resources/user/views'), 'theme_u');
     }
 
     /**
