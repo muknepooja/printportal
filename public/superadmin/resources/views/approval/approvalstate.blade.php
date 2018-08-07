@@ -3,7 +3,7 @@
 @section('theme_su::theme/content')
 
   <div class='row'>
-        <div class='col-md-8'>
+        <div class='col-md-12'>
             <!-- Box -->
             <div class="box box-primary">
                 <div class="box-header with-border">
@@ -12,70 +12,108 @@
                         <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
                     </div>
                 </div>
+                   <form>
                 <div class="box-body">
                     <button type="button" id="back" class="btn btn-info"><a style="text-decoration:none;color:white;" href="{{route('approval.index')}}">Back</a></button>
                     <hr>
-                   <form>
         <div class="form-radio form-radio-inline">
-            <div class="">Approval Set :</div>
-            <br>
+            <label class="form-radio-label">Approval Set :</label>
             <label class="form-radio-label">
-                <input name=pronoun class="form-radio-field" type="radio" required value="Default" />
+                <input id="default" class="form-radio-field" type="checkbox" required value="Default" />
                 <i class="form-radio-button"></i>
                 <span>Default</span>
             </label>
             <label class="form-radio-label">
-                <input name=pronoun class="form-radio-field" type="radio" required value="Department" />
+                <input id="department" class="form-radio-field" type="checkbox" required value="Department" />
                 <i class="form-radio-button"></i>
                 <span>Department</span>
             </label>
         </div>
+        <div class="defaultset col-md-6" style="display: none">
+        	<label>Default :</label> 
+        	<select class="defaultlevel btn btn-info">
+        		<option value=""></option>
+        		<option value="1">1</option>
+        		<option value="2">2</option>
+        		<option value="3">3</option>
+        		<option value="4">4</option>
+        	</select>
+        	<br/>
+        	<br/>
+        	<div class="emaildef">
+        		
+        	</div>
+        </div>
+        <div class="departmentset col-md-6"  style="display: none">
+        	<label>Department :</label>
+        	<select class="departmenttlevel btn btn-info">
+        		<option value=""></option>
+        		<option value="1">1</option>
+        		<option value="2">2</option>
+        		<option value="3">3</option>
+        		<option value="4">4</option>
+        	</select>
+        	<br/>
+        	<br/>
+        	<div class="emaildept">
+        		
+        	</div>
+        </div>
         <div class="form-actions">
-        <button class="form-btn" type="submit">Send inquiry</button>
-        <button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+
+        
     </div>
-</form>
+
                 </div><!-- /.box-body -->
                 <div class="box-footer">
-                    <button type="button" id="savebtn" class="btn btn-primary" style="display:none">Save</button>
+        			<button class="btn btn-primary pull-right" type="submit">Send inquiry</button>
                 </div><!-- /.box-footer-->
-            </div><!-- /.box -->
-        </div><!-- /.col -->
-        <div class='col-md-4'>
-            <!-- Box -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Upload Template</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button><!-- 
-                        <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button> -->
-                    </div>
-                </div>
-                <div class="box-body">
-                    <label class="pull-left" style="margin-top:10px">Upload : </label><input type="file" name="templateupload" class="pull-left" style="text-decoration:none;margin-left:3px;margin-top:7.5px">
-                    <button class="btn btn-primary pull-right">Upload</button>
-                </div><!-- /.box-body -->
+                </form>
             </div><!-- /.box -->
         </div><!-- /.col -->
 
     </div><!-- /.row -->
 
 <script>
-$(document).ready(function(){
-    $('#employeelist').DataTable();
-
-    $("#lockbtn").click(function(){
-        $('.inputform').prop( "disabled", true );
-        $('#lockbtn').hide();
-        $("#editbtn").show();
-        $("#savebtn").hide();
-    });
-    document.addEventListener("change", function(event) {
-	  let element = event.target;
-	  if (element && element.matches(".form-element-field")) {
-	    element.classList[element.value ? "add" : "remove"]("-hasvalue");
-	  }
+    $('#default').click(function(){
+    	if($(this).is(':checked')) {
+		    $(".defaultset").show();
+		} else {
+		    $(".defaultset").hide();
+		}
 	});
-});
+
+    $('#department').click(function(){
+    	if($(this).is(':checked')) {
+		    $(".departmentset").show();
+		} else {
+		    $(".departmentset").hide();
+		}
+	});
+
+	$('.defaultlevel').change(function () {
+		$('.emaildef').empty();
+		var level = $(this).val();
+		for (var i = 0; i < level; i++) {
+			var l = i+1;
+			var cell = '<div class="col-md-12 form-group has-feedback"> <div class="input-group"> <span class="input-group-addon">Email '+ l+'</span> <input type="text" class="inputform form-control" name="defaultemail'+l+'"> </div> </div>'
+			
+            $('.emaildef').append(cell);
+
+		}
+	});
+
+	$('.departmenttlevel').change(function () {
+		$('.emaildept').empty();
+		var level = $(this).val();
+		for (var i = 0; i < level; i++) {
+			var l = i+1;
+			var cell = '<div class="col-md-12 form-group has-feedback"> <div class="input-group"> <span class="input-group-addon">Email '+ l+'</span> <input type="text" class="inputform form-control" name="departmentemail'+l+'"> </div> </div>'
+			
+            $('.emaildept').append(cell);
+
+		}
+	});
+
 </script>
 @endsection
