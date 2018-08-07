@@ -19,5 +19,10 @@ Route::get('logout', 'Auth\LoginController@logout');
 //});
 Route::get('/home', 'HomeController@index');
 
+Route::get('/', function () {
+    return view('admin_template');
+    return view('theme_u::index');
+});
+Route::get('order','OrderController@index')->name('order'); 
 
 //Route::get('/home', 'HomeController@index')->name('home');
