@@ -18,7 +18,7 @@ $(function () {
           pointStrokeColor    : '#F56954',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(245,105,84,1)',
-          data                : [65, 59, 80, 81, 56, 55, 40]
+          data                : [5, 0, 2, 0, 10, 0, 1]
         },
         {
           label               : 'Envelope',
@@ -28,48 +28,8 @@ $(function () {
           pointStrokeColor    : 'rgba(0,166,90,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(0,166,90,1)',
-          data                : [28, 48, 40, 19, 86, 27, 90]
+          data                : [0, 0, 5, 0, 1, 2, 5]
         },
-        {
-          label               : 'Folder',
-          fillColor           : 'rgba(243,156,18,0.9)',
-          strokeColor         : 'rgba(243,156,18,0.8)',
-          pointColor          : '#F56954',
-          pointStrokeColor    : 'rgba(243,156,18,1)',
-          pointHighlightFill  : '#fff',
-          pointHighlightStroke: 'rgba(243,156,18,1)',
-          data                : [50, 32, 12, 45, 3, 45, 12]
-        },
-        {
-          label               : 'Folder',
-          fillColor           : 'rgba(0,192,239,0.9)',
-          strokeColor         : 'rgba(0,192,239,0.8)',
-          pointColor          : '#F56954',
-          pointStrokeColor    : 'rgba(0,192,239,1)',
-          pointHighlightFill  : '#fff',
-          pointHighlightStroke: 'rgba(0,192,239,1)',
-          data                : [32, 56, 3, 23, 68, 74, 98]
-        },
-        {
-          label               : 'Folder',
-          fillColor           : 'rgba(60,141,188,0.9)',
-          strokeColor         : 'rgba(60,141,188,0.8)',
-          pointColor          : '#F56954',
-          pointStrokeColor    : 'rgba(60,141,188,1)',
-          pointHighlightFill  : '#fff',
-          pointHighlightStroke: 'rgba(60,141,188,1)',
-          data                : [34, 12, 67, 34, 32, 43, 1]
-        },
-        {
-          label               : 'Folder',
-          fillColor           : 'rgba(210,214,222,0.9)',
-          strokeColor         : 'rgba(210,214,222,0.8)',
-          pointColor          : '#F56954',
-          pointStrokeColor    : 'rgba(210,214,222,1)',
-          pointHighlightFill  : '#fff',
-          pointHighlightStroke: 'rgba(210,214,222,1)',
-          data                : [34, 12, 3, 62, 18, 76, 23]
-        }
       ]
     }
   
@@ -131,38 +91,14 @@ $(function () {
       value    : 700,
       color    : '#f56954',
       highlight: '#f56954',
-      label    : 'Chrome'
+      label    : 'Namecard'
     },
     {
       value    : 500,
       color    : '#00a65a',
       highlight: '#00a65a',
-      label    : 'IE'
+      label    : 'Folder'
     },
-    {
-      value    : 400,
-      color    : '#f39c12',
-      highlight: '#f39c12',
-      label    : 'FireFox'
-    },
-    {
-      value    : 600,
-      color    : '#00c0ef',
-      highlight: '#00c0ef',
-      label    : 'Safari'
-    },
-    {
-      value    : 300,
-      color    : '#3c8dbc',
-      highlight: '#3c8dbc',
-      label    : 'Opera'
-    },
-    {
-      value    : 100,
-      color    : '#d2d6de',
-      highlight: '#d2d6de',
-      label    : 'Navigator'
-    }
   ];
   var pieOptions     = {
     // Boolean - Whether we should show a stroke on each segment
@@ -188,7 +124,7 @@ $(function () {
     // String - A legend template
     legendTemplate       : '<ul class=\'<%=name.toLowerCase()%>-legend\'><% for (var i=0; i<segments.length; i++){%><li><span style=\'background-color:<%=segments[i].fillColor%>\'></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>',
     // String - A tooltip template
-    tooltipTemplate      : '<%=value %> <%=label%> users'
+    tooltipTemplate      : '<%=value %> <%=label%>'
   };
   // Create pie or douhnut chart
   // You can switch between pie and douhnut using the method below.
@@ -305,5 +241,3 @@ $(function () {
   });
     
 });
-
-    

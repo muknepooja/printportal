@@ -57,22 +57,27 @@
                             <li class="dropdown notifications-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-inbox"></i>
-                                    <span class="label label-danger">2</span>
+                                    <span class="label label-danger">5</span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li class="header">You have 2 notifications</li>
+                                    <li class="header">You have 5 notifications</li>
                                     <li>
                                         <!-- inner menu: contains the actual data -->
                                         <ul class="menu">
                                             <li>
                                                 <a href="#">
-                                                    <i class="fa fa-shopping-cart text-aqua"></i> 2 new order received 
+                                                    <i class="fa fa-shopping-cart text-aqua"></i> 5 new order received 
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="#">
                                                     <i class="fa fa-users text-red"></i> 9 orders pending for approval
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-shopping-cart text-green"></i> 25 sales made
                                                 </a>
                                             </li>
                                         </ul>
@@ -85,7 +90,7 @@
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="{{ asset('bower_components/admin-lte/dist/img/user.jpeg') }}" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Pooja Mukne</span>
+                                    <span class="hidden-xs">Li Ping</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
@@ -93,7 +98,7 @@
                                         <img src="{{ asset('bower_components/admin-lte/dist/img/user.jpeg') }}" class="img-circle" alt="User Image">
 
                                         <p>
-                                            Pooja Mukne - Admin [EY]
+                                            Li Ping - Super Admin
                                             <small>Member since Aug. 2018</small>
                                         </p>
                                     </li>
@@ -128,7 +133,17 @@
                         </li>
                         <li>
                             <a href="pages/mailbox/mailbox.html">
+                                <i class="fa fa-building"></i> <span>Company</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/mailbox/mailbox.html">
                                 <i class="fa fa-users"></i> <span>Employees</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/mailbox/mailbox.html">
+                                <i class="fa fa-user"></i> <span>Admin</span>
                             </a>
                         </li>
                         <li class="treeview">
@@ -141,6 +156,8 @@
                             <ul class="treeview-menu">
                                 <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Manage </a></li>
                                 <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Pending </a></li>
+                                <small class="label pull-right bg-green">16</small>
+                                <small class="label pull-right bg-red">5</small>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -151,10 +168,20 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Manage </a></li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Pending </a></li>
+                                <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Manage </a></li>
+                                <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Pending </a></li>
                             </ul>
 
+                        </li>
+                        <li>
+                            <a href="pages/mailbox/mailbox.html">
+                                <i class="fa fa-file"></i> <span>Invoice</span>
+                                <!--<span class="pull-right-container">
+                                    <small class="label pull-right bg-yellow">12</small>
+                                    <small class="label pull-right bg-green">16</small>
+                                    <small class="label pull-right bg-red">5</small>
+                                </span>-->
+                            </a>
                         </li>
                         <li>
                             <a href="pages/mailbox/mailbox.html">
@@ -240,26 +267,26 @@
                 <section class="content">
                     <!-- Info boxes -->
                     <div class="row">
-                        <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="info-box">
                                 <span class="info-box-icon bg-aqua"><i class="fa fa-shopping-cart"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Total Orders</span>
-                                    <span class="info-box-number">10,673</span>
+                                    <span class="info-box-number">58,676</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
                             <!-- /.info-box -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="info-box">
-                                <span class="info-box-icon bg-green"><i class="ion ion-ios-cart"></i></span>
+                                <span class="info-box-icon bg-red"><i class="ion ion-ios-cart"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Completed Orders</span>
-                                    <span class="info-box-number">10,100</span>
+                                    <span class="info-box-number">58,410</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -270,13 +297,26 @@
                         <!-- fix for small devices only -->
                         <div class="clearfix visible-sm-block"></div>
 
-                        <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="info-box">
-                                <span class="info-box-icon bg-red"><i class="ion ion-ios-cart-outline"></i></span>
+                                <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Pending Orders</span>
-                                    <span class="info-box-number">573</span>
+                                    <span class="info-box-number">266</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Total Order Amount</span>
+                                    <span class="info-box-number">$36,73,989</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -314,7 +354,10 @@
                                             <ul class="chart-legend clearfix">
                                                 <li><i class="fa fa-circle-o text-red"></i> Namecard</li>
                                                 <li><i class="fa fa-circle-o text-green"></i> Folders</li>
-                                                <li><i class="fa fa-circle-o text-yellow"></i> Envelope</li>
+                                                <li><i class="fa fa-circle-o text-yellow"></i> Envelop</li>
+                                                <li><i class="fa fa-circle-o text-aqua"></i> NRC</li>
+                                                <li><i class="fa fa-circle-o text-light-blue"></i> Covers</li>
+                                                <li><i class="fa fa-circle-o text-gray"></i> Flyers</li>
                                             </ul>
                                         </div>
                                         <!-- /.col -->
@@ -413,7 +456,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td><a href="pages/examples/invoice.html">OR5631</a></td>
-                                                            <td>Namecard</td>
+                                                            <td>NRC</td>
                                                             <td>EY</td>
                                                             <td>Ram Yu</td>
                                                             <td><span class="label label-warning">Approved</span></td>
@@ -737,7 +780,7 @@
         <!-- ChartJS -->
         <script src="{{ asset('bower_components/chart.js/Chart.js') }}"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="{{ asset('bower_components/admin-lte/dist/js/pages/admindashboard.js') }}"></script>
+        <script src="{{ asset('bower_components/admin-lte/dist/js/pages/dashboard2.js') }}"></script>
         <!-- AdminLTE for demo purposes -->
         <script src="{{ asset('bower_components/admin-lte/dist/js/demo.js') }}"></script>
     </body>

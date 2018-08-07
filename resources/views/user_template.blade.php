@@ -57,22 +57,27 @@
                             <li class="dropdown notifications-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-inbox"></i>
-                                    <span class="label label-danger">2</span>
+                                    <span class="label label-danger">5</span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li class="header">You have 2 notifications</li>
+                                    <li class="header">You have 5 notifications</li>
                                     <li>
                                         <!-- inner menu: contains the actual data -->
                                         <ul class="menu">
                                             <li>
                                                 <a href="#">
-                                                    <i class="fa fa-shopping-cart text-aqua"></i> 2 new order received 
+                                                    <i class="fa fa-shopping-cart text-aqua"></i> 5 new order received 
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="#">
                                                     <i class="fa fa-users text-red"></i> 9 orders pending for approval
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-shopping-cart text-green"></i> 25 sales made
                                                 </a>
                                             </li>
                                         </ul>
@@ -85,7 +90,7 @@
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="{{ asset('bower_components/admin-lte/dist/img/user.jpeg') }}" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Pooja Mukne</span>
+                                    <span class="hidden-xs">Aaron Theam</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
@@ -93,7 +98,7 @@
                                         <img src="{{ asset('bower_components/admin-lte/dist/img/user.jpeg') }}" class="img-circle" alt="User Image">
 
                                         <p>
-                                            Pooja Mukne - Admin [EY]
+                                            Aaron Theam - Employee
                                             <small>Member since Aug. 2018</small>
                                         </p>
                                     </li>
@@ -127,21 +132,14 @@
                             </a>
                         </li>
                         <li>
-                            <a href="pages/mailbox/mailbox.html">
-                                <i class="fa fa-users"></i> <span>Employees</span>
-                            </a>
-                        </li>
-                        <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-check-square"></i> <span>Approval</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
+                                <i class="fa fa-user"></i> <span>Profile</span>
+                                <!--<span class="pull-right-container">
+                                    <small class="label pull-right bg-yellow">12</small>
+                                    <small class="label pull-right bg-green">16</small>
+                                    <small class="label pull-right bg-red">5</small>
+                                </span>-->
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Manage </a></li>
-                                <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Pending </a></li>
-                            </ul>
                         </li>
                         <li class="treeview">
                             <a href="#">
@@ -151,13 +149,13 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Manage </a></li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Pending </a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Namecard </a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Folder </a></li>
                             </ul>
 
                         </li>
                         <li>
-                            <a href="pages/mailbox/mailbox.html">
+                            <a href="#">
                                 <i class="fa fa-truck"></i> <span>Delivery</span>
                                 <!--<span class="pull-right-container">
                                     <small class="label pull-right bg-yellow">12</small>
@@ -246,7 +244,7 @@
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Total Orders</span>
-                                    <span class="info-box-number">10,673</span>
+                                    <span class="info-box-number">15</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -259,7 +257,7 @@
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Completed Orders</span>
-                                    <span class="info-box-number">10,100</span>
+                                    <span class="info-box-number">12</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -276,7 +274,7 @@
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Pending Orders</span>
-                                    <span class="info-box-number">573</span>
+                                    <span class="info-box-number">2</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -313,8 +311,7 @@
                                         <div class="col-md-4">
                                             <ul class="chart-legend clearfix">
                                                 <li><i class="fa fa-circle-o text-red"></i> Namecard</li>
-                                                <li><i class="fa fa-circle-o text-green"></i> Folders</li>
-                                                <li><i class="fa fa-circle-o text-yellow"></i> Envelope</li>
+                                                <li><i class="fa fa-circle-o text-green"></i> Folder</li>
                                             </ul>
                                         </div>
                                         <!-- /.col -->
@@ -380,8 +377,6 @@
                                                         <tr>
                                                             <th>Order ID</th>
                                                             <th>Item</th>
-                                                            <th>Company Name</th>
-                                                            <th>Order By</th>
                                                             <th>Status</th>
                                                             <th>Quantity</th>
                                                         </tr>
@@ -390,42 +385,32 @@
                                                         <tr>
                                                             <td><a href="pages/examples/invoice.html">OR9842</a></td>
                                                             <td>Namecard</td>
-                                                            <td>EY</td>
-                                                            <td>Alex Win</td>
                                                             <td><span class="label label-info">New</span></td>
-                                                            <td>30</td>
+                                                            <td>5</td>
                                                         </tr>
                                                         <tr>
                                                             <td><a href="pages/examples/invoice.html">OR4719</a></td>
                                                             <td>Folder</td>
-                                                            <td>EY</td>
-                                                            <td>Ram Yu</td>
                                                             <td><span class="label label-danger">Pending</span></td>
-                                                            <td>20</td>
+                                                            <td>1</td>
                                                         </tr>
                                                         <tr>
                                                             <td><a href="pages/examples/invoice.html">OR3851</a></td>
-                                                            <td>Envelope</td>
-                                                            <td>EY</td>
-                                                            <td>Gyn Rahu</td>
+                                                            <td>Namecard</td>
                                                             <td><span class="label label-success">Delivered</span></td>
-                                                            <td>20</td>
+                                                            <td>2</td>
                                                         </tr>
                                                         <tr>
                                                             <td><a href="pages/examples/invoice.html">OR5631</a></td>
                                                             <td>Namecard</td>
-                                                            <td>EY</td>
-                                                            <td>Ram Yu</td>
                                                             <td><span class="label label-warning">Approved</span></td>
-                                                            <td>50</td>
+                                                            <td>2</td>
                                                         </tr>
                                                         <tr>
                                                             <td><a href="pages/examples/invoice.html">OR6573</a></td>
                                                             <td>Folder</td>
-                                                            <td>EY</td>
-                                                            <td>Ram Yu</td>
                                                             <td><span class="label label-danger">Pending</span></td>
-                                                            <td>10</td>
+                                                            <td>1</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -446,8 +431,6 @@
                                                         <tr>
                                                             <th>Order ID</th>
                                                             <th>Item</th>
-                                                            <th>Company Name</th>
-                                                            <th>Order By</th>
                                                             <th>Status</th>
                                                             <th>Quantity</th>
                                                         </tr>
@@ -456,42 +439,32 @@
                                                         <tr>
                                                             <td><a href="pages/examples/invoice.html">OR9842</a></td>
                                                             <td>Namecard</td>
-                                                            <td>EY</td>
-                                                            <td>Alex Win</td>
                                                             <td><span class="label label-info">New</span></td>
-                                                            <td>30</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                                                            <td>Folder</td>
+                                                            <td><span class="label label-info">New</span></td>
+                                                            <td>5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                                                            <td>Folder</td>
+                                                            <td><span class="label label-info">New</span></td>
+                                                            <td>1</td>
                                                         </tr>
                                                         <tr>
                                                             <td><a href="pages/examples/invoice.html">OR9842</a></td>
                                                             <td>Namecard</td>
-                                                            <td>EY</td>
-                                                            <td>Alex Win</td>
                                                             <td><span class="label label-info">New</span></td>
-                                                            <td>30</td>
+                                                            <td>2</td>
                                                         </tr>
                                                         <tr>
                                                             <td><a href="pages/examples/invoice.html">OR9842</a></td>
                                                             <td>Namecard</td>
-                                                            <td>EY</td>
-                                                            <td>Alex Win</td>
                                                             <td><span class="label label-info">New</span></td>
-                                                            <td>30</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                                                            <td>Namecard</td>
-                                                            <td>EY</td>
-                                                            <td>Alex Win</td>
-                                                            <td><span class="label label-info">New</span></td>
-                                                            <td>30</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                                                            <td>Namecard</td>
-                                                            <td>EY</td>
-                                                            <td>Alex Win</td>
-                                                            <td><span class="label label-info">New</span></td>
-                                                            <td>30</td>
+                                                            <td>2</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -737,7 +710,7 @@
         <!-- ChartJS -->
         <script src="{{ asset('bower_components/chart.js/Chart.js') }}"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="{{ asset('bower_components/admin-lte/dist/js/pages/admindashboard.js') }}"></script>
+        <script src="{{ asset('bower_components/admin-lte/dist/js/pages/userdashboard.js') }}"></script>
         <!-- AdminLTE for demo purposes -->
         <script src="{{ asset('bower_components/admin-lte/dist/js/demo.js') }}"></script>
     </body>
