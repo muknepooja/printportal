@@ -14,7 +14,7 @@ class AOrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('theme_uadmin::order/index');
     }
 
     /**
