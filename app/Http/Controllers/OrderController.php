@@ -63,6 +63,19 @@ class OrderController extends Controller {
     public function delivery() {
         return view('theme_u::delivery/index');
     }
+    
+    public function sorder() {
+        return view('theme_s::order/index');
+    }
+    public function aorder() {
+        return view('theme_a::order/index');
+    }
+    public function amanage() {
+        return view('theme_s::order/manage');
+    }
+    public function smanage() {
+        return view('theme_s::order/manage');
+    }
 
     /**
      * Show the form for creating a new resource.

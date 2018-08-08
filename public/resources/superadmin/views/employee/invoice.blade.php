@@ -1,5 +1,5 @@
-@extends('theme_a::theme/default')
-@section('theme_a::content')
+@extends('theme_s::theme/default')
+@section('theme_s::content')
 <section class="content-header">
     <h1>
         Manage Approval
@@ -28,6 +28,7 @@
                                     <th>Order By</th>
                                     <th>Status</th>
                                     <th>Quantity</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,6 +39,7 @@
                                     <td>Alex Win</td>
                                     <td><span class="label label-info">New</span></td>
                                     <td>30</td>
+                                    <td><button class="">Show Invoice</button></td>
                                 </tr>
                                 <tr>
                                     <td><a href="pages/examples/invoice.html">OR4719</a></td>
@@ -46,6 +48,7 @@
                                     <td>Ram Yu</td>
                                     <td><span class="label label-danger">Pending</span></td>
                                     <td>20</td>
+                                    <td><button class="">Show Invoice</button></td>
                                 </tr>
                                 <tr>
                                     <td><a href="pages/examples/invoice.html">OR3851</a></td>
@@ -54,6 +57,7 @@
                                     <td>Gyn Rahu</td>
                                     <td><span class="label label-success">Delivered</span></td>
                                     <td>20</td>
+                                    <td><button class="">Show Invoice</button></td>
                                 </tr>
                                 <tr>
                                     <td><a href="pages/examples/invoice.html">OR5631</a></td>
@@ -62,6 +66,7 @@
                                     <td>Ram Yu</td>
                                     <td><span class="label label-warning">Approved</span></td>
                                     <td>50</td>
+                                    <td><button class="">Show Invoice</button></td>
                                 </tr>
                                 <tr>
                                     <td><a href="pages/examples/invoice.html">OR6573</a></td>
@@ -70,6 +75,7 @@
                                     <td>Ram Yu</td>
                                     <td><span class="label label-danger">Pending</span></td>
                                     <td>10</td>
+                                    <td><button class="">Show Invoice</button></td>
                                 </tr>
                             </tbody>
                             <tfooter>
@@ -80,6 +86,7 @@
                                     <th>Order By</th>
                                     <th>Status</th>
                                     <th>Quantity</th>
+                                    <th>Action</th>
                                 </tr>
                             </tfooter>
                             <!-- /.table-responsive -->

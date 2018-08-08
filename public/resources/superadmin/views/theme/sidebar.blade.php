@@ -15,7 +15,7 @@
                 </a>
             </li>
             <li>
-                <a href="pages/mailbox/mailbox.html">
+                <a href="{{route('semployee')}}">
                     <i class="fa fa-users"></i> <span>Employee Management</span>
                 </a>
             </li>
@@ -38,21 +38,13 @@
                     <small class="label pull-right bg-red">5</small>
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-shopping-cart "></i> <span>Orders</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
+            <li>
+                <a href="{{route('sorder')}}">
+                    <i class="fa fa-shopping-cart "></i> <span>Order Management</span>
                 </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Manage </a></li>
-                    <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Pending </a></li>
-                </ul>
-
             </li>
             <li>
-                <a href="pages/mailbox/mailbox.html">
+                <a href="{{route('sinvoice')}}">
                     <i class="fa fa-file"></i> <span>Invoice</span>
                     <!--<span class="pull-right-container">
                         <small class="label pull-right bg-yellow">12</small>
@@ -62,7 +54,7 @@
                 </a>
             </li>
             <li>
-                <a href="pages/mailbox/mailbox.html">
+                <a href="{{route('sdelivery')}}">
                     <i class="fa fa-truck"></i> <span>Delivery</span>
                     <!--<span class="pull-right-container">
                         <small class="label pull-right bg-yellow">12</small>

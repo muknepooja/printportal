@@ -1,5 +1,5 @@
-@extends('theme_a::theme/default')
-@section('theme_a::content')
+@extends('theme_s::theme/default')
+@section('theme_s::content')
 <section class="content-header">
     <h1>
         Manage Approval

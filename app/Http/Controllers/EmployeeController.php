@@ -18,16 +18,40 @@ class EmployeeController extends Controller
         return view('theme_a::employee/index');
     }
     
+    public function semployee()
+    {
+        //
+        return view('theme_s::employee/index');
+    }
+    
     public function delivery()
     {
         //
         return view('theme_a::employee/delivery');
     }
     
+    public function sdelivery()
+    {
+        //
+        return view('theme_s::employee/delivery');
+    }
+    
     public function udelivery()
     {
         //
         return view('theme_u::delivery/index');
+    }
+    
+    public function sinvoice()
+    {
+        //
+        return view('theme_s::employee/invoice');
+    }
+    
+    public function ainvoice()
+    {
+        //
+        return view('theme_a::employee/invoice');
     }
 
     /**

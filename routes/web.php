@@ -31,15 +31,16 @@ Route::get('delivery', 'OrderController@delivery')->name('delivery');
 //Route::get('/home', 'HomeController@index')->name('home');
 
 //Route::get('verify','ResourceController@index')->name('verify');
-Route::prefix('user')->group(function() {
-	Route::get('order','OrderController@index')->name('order');
-});
-Route::prefix('admin')->group(function () {
-    Route::resource('order', 'AOrderController');
-    Route::resource('employee', 'EmployeeController');
-    Route::resource('template', 'ETemplateController');
-});
-Route::get('aorder', 'OrderController@manage')->name('aorder');
+
+Route::resource('template', 'ETemplateController');
+Route::get('semployee', 'EmployeeController@semployee')->name('semployee');
+Route::get('sinvoice', 'EmployeeController@sinvoice')->name('sinvoice');
+
+Route::get('smanage', 'OrderController@smanage')->name('smanage');
+Route::get('amanage', 'OrderController@amanage')->name('amanage');
+Route::get('sorder', 'OrderController@sorder')->name('sorder');
+Route::get('aorder', 'OrderController@aorder')->name('aorder');
+Route::get('sdelivery', 'EmployeeController@sdelivery')->name('sdelivery');
 Route::get('delivery', 'EmployeeController@delivery')->name('delivery');
 Route::get('udelivery', 'EmployeeController@udelivery')->name('udelivery');
 Route::get('employee', 'EmployeeController@index')->name('employee');
