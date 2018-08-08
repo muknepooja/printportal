@@ -35,6 +35,8 @@ Route::get('delivery', 'OrderController@delivery')->name('delivery');
 Route::resource('template', 'ETemplateController');
 Route::get('semployee', 'EmployeeController@semployee')->name('semployee');
 Route::get('sinvoice', 'EmployeeController@sinvoice')->name('sinvoice');
+Route::get('company', 'EmployeeController@company')->name('company');
+Route::get('admin', 'EmployeeController@admin')->name('admin');
 
 Route::get('smanage', 'OrderController@smanage')->name('smanage');
 Route::get('amanage', 'OrderController@amanage')->name('amanage');

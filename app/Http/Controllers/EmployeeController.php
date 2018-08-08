@@ -53,6 +53,16 @@ class EmployeeController extends Controller
         //
         return view('theme_a::employee/invoice');
     }
+    public function company()
+    {
+        //
+        return view('theme_s::employee/company');
+    }
+    public function admin()
+    {
+        //
+        return view('theme_s::employee/admin');
+    }
 
     /**
      * Show the form for creating a new resource.

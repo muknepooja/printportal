@@ -10,7 +10,7 @@
                 </a>
             </li>
             <li>
-                <a href="pages/mailbox/mailbox.html">
+                <a href="{{route('company')}}">
                     <i class="fa fa-building"></i> <span>Company</span>
                 </a>
             </li>
@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li>
-                <a href="pages/mailbox/mailbox.html">
+                <a href="{{route('admin')}}">
                     <i class="fa fa-user"></i> <span>Admin</span>
                 </a>
             </li>
